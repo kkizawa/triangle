@@ -10,32 +10,30 @@ describe Triangle do
   end
 
   specify {
-    Triangle.said([2,3,4])
+    Triangle.said(['2,','3,','4'])
     expect($stdout.read).to eq "不等辺三角形ですね！"
   }
 
   specify { 
-    Triangle.said([2,2,1])
+    Triangle.said(['2,','2,','1'])
     expect($stdout.read).to eq "二等辺三角形ですね！"
    }
 
   specify {
-    Triangle.said([1,1,1])
+#pending
+    Triangle.said(['1,','1,','1'])
     expect($stdout.read).to eq "正三角形ですね！"
   }
 
   specify {
-    Triangle.said([1,2,3])
+#pending
+    Triangle.said(['1,','2,','3'])
     expect($stdout.read).to eq "三角形じゃないです＞＜"
   }
 
   specify {
-    Triangle.said([2,1,3])
-    expect($stdout.read).to eq "三角形じゃないです＞＜"
-  }
-
-  specify {
-    Triangle.said([3,2,1])
+#pending
+    Triangle.said([])
     expect($stdout.read).to eq "三角形じゃないです＞＜"
   }
 

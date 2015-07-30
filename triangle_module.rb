@@ -4,20 +4,18 @@ module Triangle
   end
 
   def self.said(abc)
-    msg = nil
+    abc.map! do |e| e.to_i end
     if ratio?(abc)
-      if abc.uniq.size == 3 
-        msg = "不等辺"
+      if abc.uniq.size == 1
+        puts "正三角形ですね！"
       elsif abc.uniq.size == 2
-        msg = "二等辺"
+        puts "二等辺三角形ですね！"
       else
-        msg = "正"
+        puts "不等辺三角形ですね！"
       end
-      msg = "#{msg}三角形ですね！"
     else
-      msg = "三角形じゃないです＞＜"
-    end
-    puts msg
+      puts "三角形じゃないです＞＜"
+    end 
   end
 
   def self.ratio?(sides)
